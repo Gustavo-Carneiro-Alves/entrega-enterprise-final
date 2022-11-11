@@ -1,0 +1,13 @@
+﻿@model ReservaModel
+@{
+    ViewData["Title"] = "Confirmação apagar a reserva";
+}
+
+<div class="text-center">
+    <h3>Realmente deseja apagar a reserva do dia (@Model.dtRetirada)?</h3>
+</div>
+
+<div class="text-center">
+    <a class="btn btn-primary" role="button" asp-controller="Reserva" asp-action="Index">Cancelar Exclusão</a>
+    <a class="btn btn-danger" role="button" asp-controller="Reserva" asp-action="Apagar" asp-route-id="@Model.Id">Confirmar Exclusão</a>
+</div>

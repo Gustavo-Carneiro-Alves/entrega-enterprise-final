@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Suporte";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+
+<form action="/Suporte/Problema/">
+    <label>Problema:</label><br />
+    <input type="text" name="problema" value="campo" /><br />
+
+    <br /><br />
+
+
+    <input type="submit" value="Enviar" />
+</form>
+
+<p>@Model.Problema</p>

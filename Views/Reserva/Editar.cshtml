@@ -1,0 +1,41 @@
+﻿@model ReservaModel
+@{
+    ViewData["Title"] = "Editar reserva";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Editar reservas</h1>
+
+</div>
+
+<form asp-controller="Reserva" asp-action="Alterar" method="post">
+
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label for="dtRetirada">Data de retirada</label>
+        <input type="text" asp-for="dtRetirada" class="form-control" placeholder="Digite a data de retirada prevista">
+        @Html.ValidationMessageFor(x => x.dtRetirada)
+    </div>
+
+    <div class="mb-3">
+        <label for="hrRetirada">Hora de retirada</label>
+        <input type="text" asp-for="hrRetirada" class="form-control" placeholder="Digite a hora de retirada prevista">
+        @Html.ValidationMessageFor(x => x.hrRetirada)
+    </div>
+
+    <div class="mb-3">
+        <label for="dtEntrega">Data de entrega</label>
+        <input type="text" asp-for="dtEntrega" class="form-control" placeholder="Digite a data de entrega prevista">
+        @Html.ValidationMessageFor(x => x.dtEntrega)
+    </div>
+
+    <div class="mb-3">
+        <label for="hrEntrega">Hora de entrega</label>
+        <input type="text" asp-for="hrEntrega" class="form-control" placeholder="Digite a hora de entrega prevista">
+        @Html.ValidationMessageFor(x => x.hrEntrega)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a class="btn btn-secondary" asp-controller="Reserva" asp-action="Index" role="button">Voltar</a>
+</form>
